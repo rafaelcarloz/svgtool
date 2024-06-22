@@ -1,0 +1,24 @@
+.bg-dark-gray{
+    background-color: rgb(43, 43, 43)!important;
+    color: white;
+}
+
+.bg-light-gray{
+    background-color: #eeeeee!important;
+}
+
+.cursor-pointer{
+    cursor: pointer!important;
+}
+
+.text-very-small{
+    font-size: 6.5pt;
+}
+
+.text-small{
+    font-size: 8.5pt;
+}
+
+.text-medium{
+    font-size: 10.5pt;
+}

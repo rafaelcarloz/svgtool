@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" style="height: 100%!important;">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SVG Tool</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link href="assets/css/page-style.css" rel="stylesheet">
+  </head>
+  <body class="bg-light-gray d-flex flex-column h-100">
+    <nav class="navbar bg-dark-gray">
+        <div class="container-fluid text-center">
+          <a class="navbar-brand text-white" href="#">
+            <i class="bi bi-file-earmark-richtext-fill"></i>
+            SVG Tool
+          </a>
+        </div>
+    </nav>
+    <div class="container-fluid row flex-fill flex-column">
+        <div class="row m-0 p-0 h-100 ">
+            <div class="col-lg-8 col-md-11 col-sm-12 mx-auto bg-white m-2 p-2 border rounded row">
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="h-100" id="ContainerPlaceHolderImage">
+                        <img src="assets/images/image-default-placeholder.webp" class="img-fluid h-100 cursor-pointer" id="ImagePlaceHolder">
+                        <input type="file" class="d-none" id="FileSelectorImage" accept="image/*"/>
+                    </div>
+                    <div class="h-100 border rounded" id="SVGContainer" style="display: none">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12 h-100">
+                    <div class="row flex-fill flex-column h-100">
+                        <div class="row m-0 p-0">
+                            <div class="d-inline">
+                                <div class="float-start">
+                                    <span class="text-muted fs-4 fw-bold">Elementos</span>
+                                </div>
+                                <div class="float-end">
+                                    <button type="button" class="btn text-muted" id="BtnAddElement" disabled>
+                                        <i class="bi bi-plus-lg pe-1 text-success"></i>
+                                        Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0 flex-grow-1">
+                            <div class="d-block mt-2">
+                                <div class="row m-0 p-2 border rounded" id="TempElement" style="display: none">
+                                    <div class="row m-0 p-1">
+                                        <label for="InputTempName" class="ps-0 text-muted text-small">Nome</label>
+                                        <div class="input-group mb-1 ps-0">
+                                            <input type="text" class="form-control" id="InputTempName" placeholder="Defina um nome para a area"/>
+                                            <button class="btn btn-outline-success rounded-end" type="button" id="BtnSaveTempElement">
+                                                <i class="bi bi-check"></i>
+                                            </button>
+                                            <div id="invalidNameFeedback" class="invalid-feedback">
+                                                Insira um nome valido para area
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-0 p-0 py-2 border-top mt-1" id="ElementsContainer">
+                                    <span class="text-small text-muted px-0">Nenhuma area adicionada!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0">
+                            <div class="d-block">
+                                <button type="button" class="btn btn-primary" id="BtnExportSVG" disabled>
+                                    <i class="bi bi-floppy-fill"></i>
+                                    Exportar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none" id="SVGExportContainer"></div>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/jquery/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/page.js"></script>
+    <script src="assets/js/SVGManipulation.js"></script>
+  </body>
+</html>
